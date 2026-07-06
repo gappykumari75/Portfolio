@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - G_Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #btn:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white">
+
+    <div id="header-placeholder"></div>
+
+
+    <section id="resume-page" class="py-5 mt-5">
+        <div class="container">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 pb-3"
+                style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <h2 class="display-6 fw-bold m-0" style="color: #00e5ff;">My Professional Journey</h2>
+                <div class="mt-3 mt-md-0">
+                    <a href="Mera_Resume.pdf" download="G_Resume.pdf" class="btn btn-outline-info px-4 py-2 fw-bold"
+                        style="border-color: black; color: #35a4a4; border-radius: 30px; transition: all 0.3s;">
+                        Download My CV 📥
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center mb-4 ps-2">
+                        <span style="font-size: 1.8rem; margin-right: 12px;">🎓</span>
+                        <h3 class="fw-bold m-0" style="border-bottom: 2px solid #00e5ff; padding-bottom: 5px;">Education
+                        </h3>
+                    </div>
+
+                    <div class="card p-4 mb-4 border-0 shadow-sm"
+                        style="background-color: #11141a; border-radius: 12px; border-left: 4px solid #00e5ff !important;">
+                        <span class="badge mb-2 align-self-start"
+                            style="background-color: rgba(0, 229, 255, 0.1); color: #00e5ff; font-size: 0.85rem;">2024 -
+                            2026</span>
+                        <h5 class="fw-bold text-white mb-1">Master of Computer Applications (MCA)</h5>
+                        <p class="text-info small mb-3">Final Semester</p>
+                        <p class="mb-0 text-secondary small" style="line-height: 1.6;">Core focus on advanced software
+                            development, dynamic database management systems, and structural web technologies.</p>
+                    </div>
+
+                    <div class="card p-4 border-0 shadow-sm"
+                        style="background-color: #11141a; border-radius: 12px; border-left: 4px solid #00e5ff !important;">
+                        <span class="badge mb-2 align-self-start"
+                            style="background-color: rgba(255, 255, 255, 0.05); color: #a0a0a0; font-size: 0.85rem;">2021
+                            - 2024</span>
+                        <h5 class="fw-bold text-white mb-1">Bachelor of Computer Applications (BCA)</h5>
+                        <p class="text-muted small mb-3">Graduated</p>
+                        <p class="mb-0 text-secondary small" style="line-height: 1.6;">Learned foundational programming
+                            languages, object-oriented concepts, and basic database structures with clean implementation
+                            layouts.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center mb-4 ps-2">
+                        <span style="font-size: 1.8rem; margin-right: 12px;">🚀</span>
+                        <h3 class="fw-bold m-0" style="border-bottom: 2px solid #00e5ff; padding-bottom: 5px;">Projects
+                        </h3>
+                    </div>
+
+                    <div class="card p-4 mb-4 border-0 shadow-sm"
+                        style="background-color: #11141a; border-radius: 12px; border-left: 4px solid #00e5ff !important;">
+                        <span class="badge mb-2 align-self-start"
+                            style="background-color: rgba(0, 229, 255, 0.1); color: #00e5ff; font-size: 0.85rem;">Web
+                            App</span>
+                        <h5 class="fw-bold text-white mb-1">Courier Management System</h5>
+                        <p class="text-info small mb-3">Final Semester Project</p>
+                        <p class="mb-0 text-secondary small" style="line-height: 1.6;">Built a full-stack platform using
+                            PHP and MySQL. Integrated dynamic tracking IDs, secure staff login authentication,
+                            conditional dashboards, and custom date-wise filtering.</p>
+                    </div>
+
+                    <div class="card p-4 border-0 shadow-sm"
+                        style="background-color: #11141a; border-radius: 12px; border-left: 4px solid #00e5ff !important;">
+                        <span class="badge mb-2 align-self-start"
+                            style="background-color: rgba(255, 255, 255, 0.05); color: #a0a0a0; font-size: 0.85rem;">Frontend</span>
+                        <h5 class="fw-bold text-white mb-1">Personal Portfolio Website</h5>
+                        <p class="text-muted small mb-3">Self Project</p>
+                        <p class="mb-0 text-secondary small" style="line-height: 1.6;">Created a highly modern, fully
+                            responsive multi-page website using HTML5, CSS3, JavaScript (Fetch API integration), and
+                            Bootstrap 5 layout system.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js">
+       
+        // Web Page ko direct PDF me print/save karne ka logic
+        function downloadWebResume() {
+            window.print();
+        }
+    </script>
+</body>
+
+</html>

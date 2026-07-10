@@ -3,7 +3,7 @@
     --bg-dark-color: #0b111e;    /* Deep Midnight Slate Blue */
     --bg-card-color: #111a2e;    /* Rich Dark Inner Card Elements */
     --text-primary: #ffffff;
-    --gradient-start: #00f2fe;   /* Electric Cyan-Teal (Premium Theme) */
+    --gradient-start: #00f2fe;   /* Electric Cyan-Teal (Premium Theme)*/ 
     --gradient-end: #4facfe;     /* Deep Sky Blue */
     --text-muted: #8fa0bc;       /* Softer muted color for readability */
 }

@@ -1,0 +1,76 @@
+/* --- SERVICES CAROUSEL DESIGN & ANIMATION --- */
+
+#services-page {
+  background-color: #0b0f19; /* Dark background */
+  position: relative;
+}
+
+.section-title {
+  color: #00e5ff;
+  text-shadow: 0 0 20px rgba(0, 255, 13, 0.762);
+}
+
+/* Default Bootstrap slide ko makkhan jaisa smooth banane ke liye custom bezier */
+.custom-services-carousel .carousel-item {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  
+}
+
+/* Glassmorphism Card Style */
+.service-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(3, 219, 14, 0.778) !important;
+  border-radius: 16px !important;
+  padding: 40px 30px;
+  max-width: 550px; /* Slider ke andar clean look ke liye fixed width */
+  min-height: 280px;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 50px; /* Dots ke liye space */
+}
+
+
+/* Typography & Glows */
+.card-heading {
+  font-weight: 700;
+  color: #00e5ff;
+}
+
+.card-text {
+  color: #cbcdeb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-icon {
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.blue-glow { filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.6)); }
+.orange-glow { filter: drop-shadow(0 0 12px rgba(255, 159, 67, 0.6)); }
+.purple-glow { filter: drop-shadow(0 0 12px rgba(155, 89, 182, 0.6)); }
+.green-glow { filter: drop-shadow(0 0 12px rgba(29, 209, 161, 0.6)); }
+
+/* --- CUSTOM DOTS (INDICATORS) --- */
+.custom-dots {
+  bottom: -10px !important; 
+}
+
+.custom-dots [button] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border: none !important;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+.custom-dots .active {
+  background-color: #00e5ff !important;
+  box-shadow: 0 0 8px #00e5ff;
+  transform: scale(1.2);
+}

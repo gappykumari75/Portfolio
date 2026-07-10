@@ -7,115 +7,221 @@
     <title>Skills - G_Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+  <style>/* --- SKILLS SECTION STYLING --- */
+#skills-page {
+  background-color: #0b0f19; /* Dark Premium Background */
+}
+
+.section-title {
+  color: #00e5ff;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+/* Slide Transition Magic (Makkhan jaisa transition) */
+.custom-skills-carousel .carousel-item {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Premium Glassmorphism Skill Card Base */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 30px 20px;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important; /* Fast smooth scale hover */
+}
+
+.skill-name {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.skill-icon {
+  font-size: 2.8rem;
+  display: inline-block;
+}
+
+/* --- HOVER EFFECT AND INDIVIDUAL GLOWS --- */
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Tech Color Profiles (Icons aur card borders par subtle glow) */
+.html-glow:hover { border-color: #ff5722 !important; box-shadow: 0 10px 25px rgba(255, 87, 34, 0.15) !important; }
+.css-glow:hover { border-color: #2196f3 !important; box-shadow: 0 10px 25px rgba(33, 150, 243, 0.15) !important; }
+.bootstrap-glow:hover { border-color: #7952b3 !important; box-shadow: 0 10px 25px rgba(121, 82, 179, 0.15) !important; }
+.js-glow:hover { border-color: #ffdf00 !important; box-shadow: 0 10px 25px rgba(255, 223, 0, 0.15) !important; }
+.php-glow:hover { border-color: #777bb4 !important; box-shadow: 0 10px 25px rgba(119, 123, 180, 0.15) !important; }
+.mysql-glow:hover { border-color: #00758f !important; box-shadow: 0 10px 25px rgba(0, 117, 143, 0.15) !important; }
+.python-glow:hover { border-color: #3776ab !important; box-shadow: 0 10px 25px rgba(55, 118, 171, 0.15) !important; }
+.mongo-glow:hover { border-color: #47a248 !important; box-shadow: 0 10px 25px rgba(71, 162, 72, 0.15) !important; }
+.ccna-glow:hover { border-color: #00b4d8 !important; box-shadow: 0 10px 25px rgba(0, 180, 216, 0.15) !important; }
+
+/* Icons Glow Adjustment */
+.skill-card .skill-icon {
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
+}
+
+/* --- CUSTOM LOWER INDICATORS (DOTS) --- */
+.custom-dots {
+  position: relative !important;
+  margin-top: 35px;
+  bottom: 0 !important;
+}
+
+.custom-dots button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  border: none !important;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+.custom-dots .active {
+  background-color: #00e5ff !important;
+  box-shadow: 0 0 10px #00e5ff;
+  transform: scale(1.2);
+}</style>
 </head>
 
 <body class="bg-dark text-white">
 
+
     <div id="header-placeholder"></div>
+       <section class="py-5 mt-5 pt-5"
+        style="background-color: #67717244; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container text-center py-3">
+            <h1 class="display-5 fw-bold text-white mb-2">Skill</h1>
 
-    <section id="skills-page" class="py-5 mt-5">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-5" style="color: #00e5ff;">My Technical Skills</h2>
+            <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+                <ol class="breadcrumb mb=0 text-gradient" style="--bs-breadcrumb-divider: '>';">
+                    <li class="breadcrumb-item">
+                        <a href="index.html" class="text-secondary text-decoration-none">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active text-info" aria-current="page">Skill</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-            <div class="row g-4 justify-content-center">
+<section id="skills-page" class="py-5 mt-5">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold section-title mb-5 css-glow">My Technical Skills</h2>
+        
+        <div id="skillsCarousel" class="carousel slide custom-skills-carousel" data-bs-ride="carousel" data-bs-interval="2500">
+            
+            <div class="carousel-indicators custom-dots">
+                <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="2"></button>
+            </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🌐</span>
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="row g-4 px-md-5 justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card html-glow">
+                                <div class="skill-icon mb-3"><span>🌐</span></div>
+                                <h5 class="skill-name">HTML5</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">HTML5</h5>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card css-glow">
+                                <div class="skill-icon mb-3"><span>🎨</span></div>
+                                <h5 class="skill-name">CSS3</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card bootstrap-glow">
+                                <div class="skill-icon mb-3"><span>⚡</span></div>
+                                <h5 class="skill-name">Bootstrap</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card js-glow">
+                                <div class="skill-icon mb-3"><span>📜</span></div>
+                                <h5 class="skill-name">JavaScript</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🎨</span>
+                <div class="carousel-item">
+                    <div class="row g-4 px-md-5 justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card php-glow">
+                                <div class="skill-icon mb-3"><span>🐘</span></div>
+                                <h5 class="skill-name">PHP</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">CSS3</h5>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card mysql-glow">
+                                <div class="skill-icon mb-3"><span>🛢️</span></div>
+                                <h5 class="skill-name">MySQL</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card python-glow">
+                                <div class="skill-icon mb-3"><span>🐍</span></div>
+                                <h5 class="skill-name">Python</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card mongo-glow">
+                                <div class="skill-icon mb-3"><span>🍃</span></div>
+                                <h5 class="skill-name">MongoDB</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">⚡</span>
+                <div class="carousel-item">
+                    <div class="row g-4 px-md-5 justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card ccna-glow">
+                                <div class="skill-icon mb-3"><span>🛜</span></div>
+                                <h5 class="skill-name">CCNA (Networking)</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">Bootstrap</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">📜</span>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card html-glow">
+                                <div class="skill-icon mb-3"><span>🌐</span></div>
+                                <h5 class="skill-name">HTML5</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">JavaScript</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🐘</span>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card css-glow">
+                                <div class="skill-icon mb-3"><span>🎨</span></div>
+                                <h5 class="skill-name">CSS3</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">PHP</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🛢️</span>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card skill-card bootstrap-glow">
+                                <div class="skill-icon mb-3"><span>⚡</span></div>
+                                <h5 class="skill-name">Bootstrap</h5>
+                            </div>
                         </div>
-                        <h5 class="text-white fw-bold">MySQL</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🐍</span>
-                        </div>
-                        <h5 class="text-white fw-bold">Python</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🍃</span>
-                        </div>
-                        <h5 class="text-white fw-bold">MongoDB</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card p-4 h-100 border-0 shadow-sm text-center"
-                        style="background-color: #11141a; border-radius: 12px; transition: transform 0.2s;">
-                        <div class="skill-icon mb-3">
-                            <span style="color: #00e5ff; font-size: 2.5rem;">🛜</span>
-                        </div>
-                        <h5 class="text-white fw-bold">CCNA (Networking)</h5>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script>
         fetch('header.html').then(r => r.text()).then(d => { document.getElementById('header-placeholder').innerHTML = d; });
         fetch('footer.html').then(r => r.text()).then(d => { document.getElementById('footer-placeholder').innerHTML = d; });

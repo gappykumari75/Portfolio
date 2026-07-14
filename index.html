@@ -19,8 +19,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <span class="sub-title">I am Gappy Kumari</span>
-                    <h1 class="hero-title my-3">Website Developer & <br><span class="text-gradient auto-type">Creative
-                            Developer</span></h1>
+
+                    <h1 class="hero-title my-3">
+                        Website Developer & <br>
+                        <span class="text-gradient auto-type"></span>
+                    </h1>
+
                     <p class="hero-text mb-4">"A passionate full-stack developer dedicated to building secure,
                         user-centric web applications. I combine modern frontend aesthetics with clean, efficient
                         backend architecture to deliver high-performance digital experiences."</p>
@@ -48,39 +52,39 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="section-title">My Quality <span class="text-gradient">Services</span></h2>
-                <p class="">According to your requirment i customized web development services.</p>
+                <p class="">Customized web development services tailored to your business needs.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
                         <div class="icon-box mb-3"><i class="fa-solid fa-code text-gradient fs-3"></i></div>
                         <h3>Web Development</h3>
-                        <p class="text-muted mb-0">PHP, MySQL aur Bootstrap ka use karke clean, dynamic aur management
-                            systems banana.</p>
+                        <p class="text-muted mb-0">Turning complex server logic into smooth, secure, and
+                            high-performance web applications.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
                         <div class="icon-box mb-3"><i class="fa-solid fa-laptop-code text-gradient fs-3"></i></div>
                         <h3>UI/UX Optimization</h3>
-                        <p class="text-muted mb-0">Responsive layouts jo desktop aur mobile dono me buttery smooth
-                            chalte hain.</p>
+                        <p class="text-muted mb-0">Crafting fully responsive layouts that deliver a buttery-smooth user
+                            experience on both desktop and mobile.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <!-- <div class="col-md-6 col-lg-4">
                     <div class="service-card">
                         <div class="icon-box mb-3"><i class="fa-solid fa-mobile text-gradient fs-3"></i></div>
                         <h3>mobile App Development</h3>
                         <p class="text-muted mb-0">Responsive layouts jo desktop aur mobile dono me buttery smooth
                             chalte hain.</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-6 col-lg-4">
                     <div class="service-card">
                         <div class="icon-box mb-3"><i class="fa-solid fa-database text-gradient fs-3"></i></div>
                         <h3>Database Design</h3>
-                        <p class="text-muted mb-0">Relational databases ko structural tarike se query performance
-                            optimize karna.</p>
+                        <p class="text-muted mb-0">Designing structured relational databases optimized for fast query
+                            performance and data integrity</p>
                     </div>
                 </div>
             </div>
@@ -209,12 +213,16 @@
                         </div>
                     </form>
                     <script>
-                        var typed = new Typed(".auto-type", {
-                            strings: ["Website Developer", "UI/UX Designer", "Full-Stack Developer"],
-                            typeSpeed: 100,
-                            backSpeed: 60,
-                            loop: true
-                        });
+                        window.onload = function () {
+                            if (document.querySelector(".auto-type")) {
+                                var typed = new Typed(".auto-type", {
+                                    strings: ["Website Developer", "UI/UX Designer", "Full-Stack Developer"],
+                                    typeSpeed: 100,
+                                    backSpeed: 60,
+                                    loop: true
+                                });
+                            }
+                        };
                         async function handleFormSubmit(event) {
                             // 1. Page refresh hone se rokna
                             event.preventDefault();
